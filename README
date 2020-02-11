@@ -1,0 +1,34 @@
+Musat Mihai-Robert 
+Grupa 323CB 
+
+Tema 2 POO - Lost in NoSQL
+--------------------------
+
+	Pentru implementarea temei, am folosit urmatoarele clase: Attributes, Entity, Instances, DataBase, Comp, a caror 
+functionalitate o voi descrie in cele ce urmeaza.
+	Prima dintre ele, clasa Attributes o folosesc pentru a simula tipul de date cu care opereaza baza de date.
+In interiorul acestei clase, cea mai relevanta dintre metodele implementate este printAttributes deoarece o folosesc
+pentru afisarea in output a atributelor tipurilor de date prezente in baza de date.In clasa Entity, reprezint o 
+entitate ca o lista de atribute, acest fapt permitandu-mi o mai buna reprezentare a datelor in memorie decat in 
+cazul folosirii unui ArrayList.Cea mai importanta metoda in aceasta clasa este constructorul, in care la final populez
+entitatea(reprezentata ca o lista simplu inlantuita de atribute) cu valori din vectorul de atribute (acestea fiind 
+numele atributului ca prima valoare, urmata de tipul atributului drept cea de-a doua valoare.Pentru implementarea 
+clasei Instances, am folosit mai multe metode, dintre care cele mai importante, pe langa constructor sunt printInstances
+care imi ofera posibilitatea sa afisez o instanta prin numele entitatii, urmata de atributele pe care le contine 
+si updateInstances prin care suprascriu o numele unui atribut cu o valoare pe care o dau ca parametru.De asemenea am
+suprascris metoda equals astfel incat sa imi intoarca true doar daca exista o echivalenta atat intre numele entitatii
+curente si cel al unei entitati oarecare, respectiv intre id-ul instantei curente si cel al unei instante oarecare.
+	Clasa DataBase este o reprezentare complexa a tuturor claselor discutate mai sus, in sensul in care manipuleaza atat
+obiecte de tip Attributes, cati si obiecte de tip Entity sau Instances.Asfel,prima operatie din enunt este 
+chiar constructorul, a doua operatie este data de functia getEntities deoarece in momentul in care creez lista de entitati
+ca tip de date Entity se apeleaza automat constructorul acestei clase, iar a treia operatie este cea de inserare, care se face
+conform enuntului, ordonat dupa cea mai recenta intrare.Pentru acest lucru, am implementat clasa Comp care implementeaza 
+un comparator pe tipul de date Instances in functie de timestamp.O alta metoda implementata in DataBase este snapShot care
+afiseaza cum arata baza de date la momentul curent, iar daca este goala afiseaza un mesaj corespunzator.Metoda update face
+actualizarea bazei de date prin actualizarea tutoror copiilor unei instante in toate nodurile in care a fost inserata, iar 
+delete este metoda complementara prin faptul ca sterge aceste copii.O ultima operatie implementata in tema este cea de get, 
+prin care se afiseaza ce contine instanta respectiva, precum si nodurile in care se afla.
+
+
+
+
